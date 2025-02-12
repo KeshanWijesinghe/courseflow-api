@@ -1,0 +1,35 @@
+{
+  "name": "courseflow-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "start": "node api.js && cross-env NODE_ENV=production tsx src/server.ts",
+    "dev": "node api.js && cross-env NODE_ENV=development nodemon --exec tsx src/server.ts",
+    "build": "node api.js && tsc",
+    "serve": "node dist/server.js"
+  },
+  "engines": {
+    "node": "22",
+    "npm": "10",
+    "pnpm": "10"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "tsx": "^4.19.2"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.13.1",
+    "nodemon": "^3.1.9",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.3"
+  },
+  "packageManager": "pnpm@10.3.0+sha512.ee592eda8815a8a293c206bb0917c4bb0ff274c50def7cbc17be05ec641fc2d1b02490ce660061356bd0d126a4d7eb2ec8830e6959fb8a447571c631d5a2442d"
+}
